@@ -97,7 +97,8 @@ public class CamController extends InputAdapter {
             zoomDistance = 21;
             camera.zoom = 2.1f;
             
-            //do stuff in this particular zoomLevel
+            //deactivate stuff from the previous zoomLevel
+            //activate stuff _ONCE_ for this particular zoomLevel when reaching it
         }
         if (zoomLevel == ZoomLevel.TILE && zoomDistance == 20 && amount == 1) {
             //entering GRID from TILE
@@ -106,7 +107,8 @@ public class CamController extends InputAdapter {
             zoomDistance = 0;
             camera.zoom = 0f;
             
-            //do stuff in this particular zoomLevel
+            //deactivate stuff from the previous zoomLevel
+            //activate stuff _ONCE_ for this particular zoomLevel when reaching it
         }
         if (zoomLevel == ZoomLevel.WORLD && zoomDistance == 1 && amount == -1) {
             //entering GRID from WORLD
@@ -115,7 +117,8 @@ public class CamController extends InputAdapter {
             zoomDistance = 21;
             camera.zoom = 2.1f;
             
-            //do stuff in this particular zoomLevel
+            //deactivate stuff from the previous zoomLevel
+            //activate stuff _ONCE_ for this particular zoomLevel when reaching it
         }
         if (zoomLevel == ZoomLevel.GRID && zoomDistance == 20 && amount == 1) {
             //entering WORLD from GRID
@@ -124,7 +127,8 @@ public class CamController extends InputAdapter {
             zoomDistance = 0;
             camera.zoom = 0f;
             
-            //do stuff in this particular zoomLevel
+            //deactivate stuff from the previous zoomLevel
+            //activate stuff _ONCE_ for this particular zoomLevel when reaching it
         }
 
         if (!zoomLock) {
