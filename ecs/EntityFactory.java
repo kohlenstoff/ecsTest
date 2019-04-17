@@ -4,7 +4,7 @@ import com.badlogic.ashley.core.Engine;
 import com.badlogic.ashley.core.Entity;
 import ecsTest.ecs.components.CameraComponent;
 import ecsTest.ecs.components.InputComponent;
-import ecsTest.ecs.components.ObliqueGridComponent;
+import ecsTest.ecs.components.IsometricGridComponent;
 import ecsTest.ecs.components.PositionComponent;
 import ecsTest.ecs.components.RenderableComponent;
 import ecsTest.ecs.components.WorldComponent;
