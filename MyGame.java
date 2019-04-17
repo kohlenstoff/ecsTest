@@ -19,7 +19,7 @@ import ecsTest.ecs.EntityFactory;
 import ecsTest.ecs.components.CameraComponent;
 import ecsTest.ecs.systems.InputSystem;
 import ecsTest.ecs.systems.RenderingSystem;
-import ecsTest.ecs.systems.TerritorySetupSystem;
+import ecsTest.ecs.systems.TileSetupSystem;
 import ecsTest.CamController;
 import ecsTest.GameGestureListener;
 
