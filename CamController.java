@@ -87,6 +87,9 @@ public class CamController extends InputAdapter {
         if ((zoomLevel == ZoomLevel.TILE && zoomDistance == 1 && amount == 1) || (zoomLevel == ZoomLevel.WORLD && zoomDistance == 20 && amount == -1)) {
             zoomLock = false;
         }
+        /*
+        TODO: Needs to be moved into a system!?
+        */
         if (zoomLevel == ZoomLevel.GRID && zoomDistance == 1 && amount == -1) {
             //entering TILE from GRID
             System.out.println("TILE from GRID");
