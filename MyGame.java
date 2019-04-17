@@ -27,14 +27,14 @@ import ecsTest.GameGestureListener;
 public class MyGame extends ApplicationAdapter {
 
 	Viewport viewport;
-  final float screenAspectRatio = (float)Gdx.graphics.getWidth()/(float)Gdx.graphics.getHeight();
+  	final float screenAspectRatio = (float)Gdx.graphics.getWidth()/(float)Gdx.graphics.getHeight();
 	OrthographicCamera cameraGame;
 	CamController gameCamController;
 
 	InputMultiplexer inputMultiplexer;
 
 	SpriteBatch batch;
-  Stage stageHUD;
+  	Stage stageHUD;
 
 	//ECS
 	Engine engine;
@@ -46,7 +46,7 @@ public class MyGame extends ApplicationAdapter {
 
 	public MyGame(){
 		batch = new SpriteBatch();
-    stageHUD = new Stage();
+    		stageHUD = new Stage();
 
 		//ECS Engine
 		engine = new Engine();
@@ -67,8 +67,8 @@ public class MyGame extends ApplicationAdapter {
 
 		cameraGame = engine.getEntitiesFor( Family.one(CameraComponent.class).get() ).first().getComponent(CameraComponent.class).getCam();
 		float worldWidht = 1800f;
-    float worldHeight = 600f;
-    viewport = new FitViewport( worldHeight*screenAspectRatio, worldHeight, cameraGame );
+    		float worldHeight = 600f;
+    		viewport = new FitViewport( worldHeight*screenAspectRatio, worldHeight, cameraGame );
 		viewport.update( Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true );
 
 		gameCamController = inputSystem.getCamController();
@@ -81,7 +81,7 @@ public class MyGame extends ApplicationAdapter {
 			inputMultiplexer.addProcessor( new GestureDetector(new GameGestureListener(cameraGame) ));
 		}
     
-    //add the UI/HUD
+    		//add the UI/HUD
 		inputMultiplexer.addProcessor( stageHUD );
     
 		Gdx.input.setInputProcessor( inputMultiplexer );
@@ -130,6 +130,6 @@ public class MyGame extends ApplicationAdapter {
 	@Override
 	public void dispose() {
 		batch.dispose();
-    stage.dispose();
+    		stage.dispose();
 	}
 }
